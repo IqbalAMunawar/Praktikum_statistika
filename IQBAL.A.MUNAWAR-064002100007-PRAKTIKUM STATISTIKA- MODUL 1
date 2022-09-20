@@ -1,0 +1,8 @@
+data_iqbal_csv = read.csv("C:/Users/iqbal/Documents/data_iqbal.csv", header = TRUE, sep = ";")
+View(data_iqbal_csv)
+mean(data_iqbal_csv$Tinggi.Badan)
+str(data_iqbal_csv)
+
+install.packages("xlsx")
+library("xlsx")
+data_iqbal_xlsx = read.xlsx("C:/Users/iqbal/Documents/data_iqbal.xlsx", 1)
