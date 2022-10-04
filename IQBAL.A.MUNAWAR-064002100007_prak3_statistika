@@ -1,0 +1,28 @@
+data_iqbal=read.csv2("C:/Users/iqbal/Documents/data1_iqbal.csv")
+View(data_iqbal)
+
+iqbal <- data_iqbal[data_iqbal$tinggi.badan==177,]
+View(iqbal)
+
+data_iqbal$tinggi.badan <- ifelse(data_iqbal$tinggi.badan > 160,c("tinggi"),c("pendek")) 
+View(iqbal)
+
+data_iqbal$Jurusan <- c("Infor20")
+data_iqbal$Fakultas<- c("FTI")
+View(data_iqbal)
+
+data_iqbal$Fakultas<-NULL
+View(data_iqbal)
+
+data_iqbal.namagen <- data_iqbal[1:2] 
+data_iqbal.namagen1 <- data_iqbal[3:4] 
+data_iqbal.gabungan<-cbind(data_iqbal.namagen,data_iqbal.namagen1)
+View(data_iqbal.gabungan)
+
+data_baris_iqbal1sampai5<-data_iqbal[1:5,]
+data_baris_iqbal.25sampai30<-data_iqbal[25:30,]
+data_baris_iqbal.gabungan<-rbind(data_baris_iqbal1sampai5,data_baris_iqbal.25sampai30)
+View(data_baris_iqbal.gabungan)
+
+data_iqbal.sort<-data_iqbal[order(data_iqbal$waktu.perjalanan),]
+View(data_iqbal.sort)
