@@ -1,0 +1,5 @@
+iqbal=read.delim("clipboard")
+View(iqbal)
+str(iqbal)
+mean(iqbal$Pendapatan)
+t.test(iqbal$Pendapatan, mu=10)
