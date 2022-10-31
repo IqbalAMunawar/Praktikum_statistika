@@ -1,0 +1,36 @@
+summary(iris)
+head(iris)
+by(iris$Petal.Length, iris$Species, summary)
+mean(iris$Sepal.Length)
+var(iris$Sepal.Length)
+boxplot(iris$Petal.Length)
+boxplot(Petal.Length ~ Species, data=iris, main="Petal Length", xlab="Species", ylab="Length")
+
+hist(iris$Petal.Length)
+hist(iris$Sepal.Width)
+hist(iris$Sepal.Width[iris$Species=="setosa"])
+hist(iris$Sepal.Width[iris$Species=="versicolor"])
+iqbal=density(iris$Petal.Length)
+plot(iqbal)
+iqbal=density(iris$Sepal.Width[iris$Species=="versicolor"])
+plot (iqbal)
+
+install.packages("ggplot2")
+
+library(ggplot2)
+
+data_iqbal=read.csv2("C:/Users/iqbal/Documents/prak_statistika/DirectMarketing.csv")
+qplot(data_iqbal$AmountSpent, data_iqbal$Salary)
+plot(data_iqbal$AmountSpent, data_iqbal$Salary)
+
+data_iqbal=read.csv2("C:/Users/iqbal/Downloads/DirectMarketing.csv")
+
+hist(data_iqbal$AmountSpent)
+iqbal=density(data_iqbal$AmountSpent)
+plot(iqbal)
+library(ggplot2)
+data_iqbal1=read.csv2("C:/Users/iqbal/Downloads/houseprice.csv")
+qplot(data_iqbal1$SqFt, data_iqbal1$Price)
+qplot(data_iqbal1$Bedrooms, data_iqbal1$Price)
+qplot(data_iqbal1$Bathrooms, data_iqbal1$Price)
+qplot(data_iqbal1$Offers, data_iqbal1$Price)
