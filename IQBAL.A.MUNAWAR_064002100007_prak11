@@ -1,0 +1,15 @@
+df_iqbal = read.delim("clipboard")
+View(df_iqbal)
+head(df_iqbal)
+model <- aov(korosi~metode, data=df_iqbal)
+summary(model)
+tukey.test <- TukeyHSD(model)
+tukey.test
+df_iqbal=PlantGrowth
+View(df_iqbal)
+#analisis anova
+model <- aov(weight~group, data=df_iqbal)
+summary(model)
+#Analisis Tukey Test
+tukey.test <- TukeyHSD(model)
+tukey.test
