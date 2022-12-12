@@ -1,0 +1,13 @@
+df_iqbal=read.delim("clipboard")
+head(df_iqbal)
+model_reg=lm(df_iqbal$Y~df_iqbal$X)
+summary(model_reg)
+Nilai R Squarenya adalah 0.403
+df_iqbal=read.delim("clipboard")
+df_iqbal$brick_dummy <- ifelse(df_iqbal$Brick =="Yes", 1,0)
+df_iqbal$N_dummy1 <- ifelse(df_iqbal$Neighborhood =="West", 1,0)
+df_iqbal$N_dummy2 <- ifelse(df_iqbal$Neighborhood =="North", 1,0)
+model=lm(df_iqbal$Price~df_iqbal$SqFt+df_iqbal$Bedrooms+df_iqbal$Bathrooms+df_iqbal$brick_dummy+df_iqbal$N_dummy1+df_iqbal$N_dummy2)
+summary(model)
+by(df_iqbal$Price,df_iqbal$Neighborhood,mean)
+by(df_iqbal$Price,df_iqbal$Brick,mean)
