@@ -1,0 +1,20 @@
+dataku_iqbal = read.delim("clipboard")
+View(dataku_iqbal)
+wilcox.test(dataku_iqbal$Sebelum,dataku_iqbal$Setelah ,paired=TRUE)
+
+dataku_iqbal = read.delim("clipboard")
+View(dataku_iqbal)
+wilcox.test(dataku_iqbal$Sebelum,dataku_iqbal$Sesudah ,paired=TRUE)
+
+df_iqbal=read.delim("clipboard")
+wilcox.test(df_iqbal$obat~df_iqbal$grup)
+head(df_iqbal)
+rank(df_iqbal$obat)
+
+dataku_iqbal = read.delim("clipboard")
+View(dataku_iqbal)
+wilcox.test(dataku_iqbal$Ganjil,dataku_iqbal$Genap ,paired=TRUE)
+
+dataku_iqbal = read.delim("clipboard")
+View(dataku_iqbal)
+wilcox.test(dataku_iqbal$caffeine,dataku_iqbal$placebo ,paired=TRUE)
